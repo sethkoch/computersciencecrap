@@ -1,0 +1,6 @@
+// the original str needs to be returned as atleast one item in the array.
+//If the original string was 'ab', then the array you return would be ['ab', 'ba']  note: two letters equal output length of 2.
+//If the original string was 'abc', then the array you return would be ['abc', 'acb', 'bca', 'bac', 'cba', 'cab'] note: 3 letters equals output length of 6.
+//If the original string was 'abcd', then the array you return would be ['abcd', 'abdc', 'acbd', 'acdb', 'adcb', 'adbc', 'bacd', 'badc', 'bcad', 'bcda', 'bdac', 'bdca', 'cabd', 'cadb', 'cbad', 'cbda', 'cdab', 'cdba', 'dabc', 'dacb', 'dbac', 'dbca', 'dcab', 'dcba' ] note: 4 letter equals output length of 24
+//this will grow exponentially!
+//so, assuming I start with the first letter, and then add the next, and the next and so on until the length is equal to the length of the string that was fed in, then I can just push that result to the answer array.  But what about the next one?  If, for example, the original string was "abcd", then I'll push 'abcd' to the array, and then I'll need to swap the last two letters.  That will push 'abdc' to the array.  Then I'll just continue to bubble that last letter over, so I'll do it again, and that will push 'adbc' to the answer array.  Then I'll bubble the last letter until it reaches the the position next to the first letter.
